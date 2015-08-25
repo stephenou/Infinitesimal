@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /blog
+RewriteCond $1 !^(index\.php|cache|media|posts)
+RewriteRule ^()/?$ cache/home.html [L]
+RewriteRule ^(rss)/?$ cache/rss.xml [L]
+RewriteRule ^([a-z0-9-]*)/?$ cache/$1.html [L]
